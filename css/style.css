@@ -1,13 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-
 }
 
 body {
   background-color: rgb(7, 7, 51);
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
 }
 
@@ -27,16 +26,23 @@ nav ul {
 nav li {
   list-style: none;
   padding: 10px;
+ 
+
 }
-nav ul li a{
-  text-decoration:none;
+nav ul li a {
+  text-decoration: none;
   color: white;
+  transition: color 1s ease;
 }
-nav ul li a:hover{
+nav ul li a:hover {
   color: blueviolet;
+  /* transform: scale(5); */
+ 
 }
-html
-{
+nav ul li a:active {
+  color: black;
+}
+html {
   scroll-behavior: smooth;
 }
 
@@ -50,7 +56,7 @@ html
   display: flex;
   justify-content: space-around;
   margin: 10px 0;
-  
+  height: 70vh;
 }
 
 .leftSection {
@@ -59,12 +65,12 @@ html
   flex-direction: column;
   justify-content: center;
   /* align-items:self-start; */
-  margin:0x 0px;
+  margin: 0x 0px;
   padding-left: 10px;
   font-size: 2rem;
   width: 50%;
 }
-.leftSection span{
+.leftSection span {
   color: blueviolet;
 }
 
@@ -77,60 +83,83 @@ html
 .rightSection img {
   width: 300px;
   max-width: 100%;
+  animation: float 3s ease-in-out  infinite;
 }
-hr{
+@keyframes float {
+  0%{
+    transform: translateY(0);
+  }
+  50%
+  {
+    transform: translateY(-15px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+
+  
+}
+hr {
   border: none;
   background-color: blueviolet;
   height: 0.5px;
-  margin:16px;
+  margin: 16px;
 }
-.secondsection
-{
+.secondsection {
   /* display: flex; */
   /* justify-content: center; */
   /* flex-direction:column; */
   margin: 24px;
   height: 80vh;
-  max-width: 80vh;
+  max-width: 80vw;
 }
-.grey-text{
+.grey-text {
   color: grey;
 }
-.box{
+.box {
   background-color: white;
   width: 80vw;
   height: 1px;
   display: flex;
   justify-content: space-around;
-  margin: 56px 0px;
+  margin: 100px 0px;
 }
-.vertical{
+.vertical {
   background-color: white;
   width: 1px;
   height: 100px;
   display: flex;
   margin: 0px 48px;
 }
-.vertical-text{
+.vertical-text {
   position: relative;
   top: 100px;
-      font-size: 12px;
-    font-weight: bold;
-    width: 150px;
+  font-size: 12px;
+  font-weight: bold;
+  width: 150px;
+  left: -50px;
 }
-.vertical-desc
+.vertical-desc {
+  font-size: 12px;
+  width: 120px;
+  right: 114px;
+  position: relative;
+  top: 132px;
+}
+.image-top {
+  width: 81px;
+  position: relative;
+  top: -50px;
+  left: -24px;
+  height: 3rem;
+}
+.project-section
 {
-    font-size: 12px;
-    width: 120px;
-    right: 64px;
-    position: relative;
-    top: 132px;
-  
+   margin: 24px;
+ height: 80vh;
+ max-width: 80vw;
 }
-.image-top{
-   width: 23px;
-
-   position: relative;
-   top: -32px;
-   left: -9px;
+.project-container
+{
+  display: flex;
 }
